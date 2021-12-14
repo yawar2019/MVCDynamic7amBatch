@@ -1,0 +1,36 @@
+﻿@model MVCDynamic7amBatch.Models.EmpDept
+@{
+    ViewBag.Title = "getMeListEmployeesAndDepartment";
+}
+
+<h2>getMeListEmployeesAndDepartment</h2>
+
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>EmpId</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+    @foreach (var item in Model.Emp)
+    {
+        <tr>
+            <td>@item.EmpId</td>
+            <td>@item.EmpName</td>
+            <td>@item.EmpSalary</td>
+        </tr>
+    }
+</table>
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>DeptId</th>
+        <th>Name</th>
+    </tr>
+    @foreach (var item in Model.dept)
+    {
+        <tr>
+            <td>@item.DeptId</td>
+            <td>@item.DeptName</td>
+        </tr>
+    }
+</table>
