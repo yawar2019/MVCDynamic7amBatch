@@ -1,0 +1,15 @@
+﻿@model List<MVCDynamic7amBatch.Models.EmployeeModel>
+@{
+    ViewBag.Title = "MyPartialViewExample1";
+}
+
+<h2>MyPartialViewExample1</h2>
+
+<h1>Students Name</h1>
+
+Anil<br />
+Ashwini<br />
+Monika<br />
+Nilima<br />
+
+@Html.Partial("_MyPartialView",Model)

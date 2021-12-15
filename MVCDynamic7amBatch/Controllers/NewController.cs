@@ -133,7 +133,7 @@ namespace MVCDynamic7amBatch.Controllers
         }
 
 
-        public ActionResult getMeListEmployeesAndDepartment()
+        public ViewResult getMeListEmployeesAndDepartment(int? id ,string Name)
         {
             //id,name,salary
 
@@ -182,6 +182,33 @@ namespace MVCDynamic7amBatch.Controllers
 
         }
 
+        public RedirectResult GetMeOutput()
+        {
+            return Redirect("http://www.google.com");
+        }
+        public RedirectResult GetMeOutput2()
+        {
+            return Redirect("~/new/getMeListEmployeesAndDepartment?id=1&Name=Anil");
+        }
+
+        public ViewResult MyPartialViewExample1()
+        {
+            EmployeeModel emp = new EmployeeModel();
+            emp.EmpName = "Sagar";
+
+            EmployeeModel emp1 = new EmployeeModel();
+            emp1.EmpName = "Pavan";
+
+            EmployeeModel emp2 = new EmployeeModel();
+            emp2.EmpName = "Vidya";
+
+            List<EmployeeModel> ListObj = new List<EmployeeModel>();//initially null
+            ListObj.Add(emp);
+            ListObj.Add(emp1);
+            ListObj.Add(emp2);
+
+            return View(ListObj);
+        }
 
     }
 }
