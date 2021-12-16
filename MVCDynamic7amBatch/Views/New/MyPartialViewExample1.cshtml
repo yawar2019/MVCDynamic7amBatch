@@ -12,4 +12,15 @@ Ashwini<br />
 Monika<br />
 Nilima<br />
 
-@Html.Partial("_MyPartialView",Model)
+@{
+    var s=Html.Partial("_MyPartialView", Model);
+    int a = 10;
+    if (a == 10)
+    {
+        @s
+    }
+      }
+
+@{
+    Html.RenderPartial("_MyPartialView", Model);
+    }

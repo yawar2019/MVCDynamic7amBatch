@@ -210,5 +210,53 @@ namespace MVCDynamic7amBatch.Controllers
             return View(ListObj);
         }
 
+        public PartialViewResult MyPartialViewExample2()
+        {
+            EmployeeModel emp = new EmployeeModel();
+            emp.EmpName = "Sagar";
+
+            EmployeeModel emp1 = new EmployeeModel();
+            emp1.EmpName = "Pavan";
+
+            EmployeeModel emp2 = new EmployeeModel();
+            emp2.EmpName = "Vidya";
+
+            List<EmployeeModel> ListObj = new List<EmployeeModel>();//initially null
+            ListObj.Add(emp);
+            ListObj.Add(emp1);
+            ListObj.Add(emp2);
+
+            return PartialView("_MyPartialView",ListObj);
+        }
+
+        public FileResult getMeFile(int? id)
+        {
+            return File("~/Web.config", "text/plain");
+        }
+
+        public FileResult getMeFile2(EmployeeModel emp)
+        {
+            return File("~/ActionResult.pdf", "application/pdf");
+        }
+
+        public FileResult getMeFile3()
+        {
+            return File("~/ActionResult.pdf", "application/pdf", "ActionResult.pdf");
+        }
+
+        public RedirectToRouteResult redirectToMyRoad()
+        {
+            return RedirectToAction("getMeFile",new {id=1});
+        }
+
+        public RedirectToRouteResult redirectToMyRoad2()
+        {
+            EmployeeModel emp2 = new EmployeeModel();
+            emp2.EmpId = 3;
+            emp2.EmpName = "Kamal";
+            emp2.EmpSalary = 90000;
+
+            return RedirectToAction("getMeFile2",emp2);
+        }
     }
 }
