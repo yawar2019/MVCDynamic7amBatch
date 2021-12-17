@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "GetMeJsondata2";
+}
+
+<h2>GetMeJsondata2</h2>
+<input type="text" id="txtEmpName" value="" />
+
+<script src="~/scripts/jquery-1.10.2.js"></script>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: "http://localhost:50704/new/getJsonData",
+            dataType: "json",
+            type: "GET",
+            success: function (result) {
+                $.each(result, function (i, key) {
+
+                    if (key[0].EmpName == "Srikanth") {
+                        $('#txtEmpName').val(key[0].EmpName);
+                    }
+                })
+            }
+        })
+
+
+
+    })
+</script>

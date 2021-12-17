@@ -258,5 +258,76 @@ namespace MVCDynamic7amBatch.Controllers
 
             return RedirectToAction("getMeFile2",emp2);
         }
+
+        public RedirectToRouteResult GetToRoute()
+        {
+            return RedirectToRoute("Tom");
+        }
+
+        public JsonResult getJsonData()
+        {
+            List<EmployeeModel> ListObj = new List<EmployeeModel>();//initially null
+
+            EmployeeModel emp = new EmployeeModel();
+            emp.EmpId = 1;
+            emp.EmpName = "Srikanth";
+            emp.EmpSalary = 570000;
+
+            EmployeeModel emp1 = new EmployeeModel();
+            emp1.EmpId = 2;
+            emp1.EmpName = "Shivangi";
+            emp1.EmpSalary = 80000;
+
+            EmployeeModel emp2 = new EmployeeModel();
+            emp2.EmpId = 3;
+            emp2.EmpName = "Kamal";
+            emp2.EmpSalary = 90000;
+
+            ListObj.Add(emp);
+            ListObj.Add(emp1);
+            ListObj.Add(emp2);
+
+            DepartmentModel dept = new Models.DepartmentModel();
+            dept.DeptId = 1211;
+            dept.DeptName = "IT";
+
+
+            DepartmentModel dept1 = new Models.DepartmentModel();
+            dept1.DeptId = 1212;
+            dept1.DeptName = "Network";
+
+            List<DepartmentModel> listDept = new List<DepartmentModel>();
+            listDept.Add(dept);
+            listDept.Add(dept1);
+
+
+            EmpDept empDept = new Models.EmpDept();
+            empDept.Emp = ListObj;
+            empDept.dept = listDept;
+
+            return Json(empDept, JsonRequestBehavior.AllowGet);
+
+        }
+
+        public ActionResult GetMeJsondata2()
+        {
+            return View();
+        }
+
+        public ContentResult getContent(int? id)
+        {
+            if (id == 1)
+            {
+                return Content("Hello World");
+            }
+            else if (id == 2)
+            {
+                return Content("<p style=color:red>Hello Word</p>");
+            }
+            else
+            {
+                return Content("<script>alert('Hello World')</script>");
+            }
+        }
     }
 }
