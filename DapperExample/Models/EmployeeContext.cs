@@ -12,8 +12,19 @@ namespace DapperExample.Models
         SqlConnection con = new SqlConnection(@"Data Source=AZAM-PC\SQLEXPRESS;Initial Catalog=Employee;Integrated Security=true;");
         public List<EmployeeModel> getEmployees()
         {
-            var Employees = con.Query<EmployeeModel>("select EmpId,EmpName,EmpSalary from dbo.employeeDetails").ToList();
+            var Employees = con.Query<EmployeeModel>("sp_employee",commandType:CommandType.StoredProcedure).ToList();
             return Employees;
         }
+
+        public int SaveEmployees(EmployeeModel emp)
+        {
+            var paramater = new DynamicParameters();
+            paramater.Add("@EmpName",emp.EmpName);
+            paramater.Add("@Empsalary",emp.EmpSalary);
+
+            int result = con.Execute("sp_CreateEmployee",param:paramater, commandType: CommandType.StoredProcedure);
+            return result;
+        }
+
     }
 }
