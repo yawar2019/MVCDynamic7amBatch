@@ -19,7 +19,8 @@
             <td>@item.EmpName</td>
             <td>@item.EmpSalary</td>
             <td>
-            @Html.ActionLink("Edit","Edit",new {id= @item.EmpId },new {@class="btn btn-success"})
+            @Html.ActionLink("Edit","Edit",new {id= @item.EmpId },new {@class="btn btn-success"})|
+            @Html.ActionLink("Delete", "Delete", new { id = @item.EmpId }, new { @class = "btn btn-danger" })
             </td>
         </tr>
     }
