@@ -30,5 +30,44 @@ namespace AdoNet.Models
 
             return listObj;
         }
+
+        public int SaveEmployee(EmployeeModel emp)
+        {
+            SqlCommand cmd = new SqlCommand("sp_CreateEmployee", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("EmpName", emp.EmpName);
+            cmd.Parameters.AddWithValue("EmpSalary", emp.EmpSalary);
+            con.Open();
+            int i = cmd.ExecuteNonQuery();//execute  query and return nos of rows effected
+            con.Close();
+            return i;
+        }
+
+
+
+        public EmployeeModel getEmployeeDataById(int? id)
+        {
+            EmployeeModel emp = new EmployeeModel();
+
+            SqlCommand cmd = new SqlCommand("sp_RajagetEmployeeById", con);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@EmpId",id);
+
+
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                emp.EmpId = Convert.ToInt32(dr[0]);
+                emp.EmpName = Convert.ToString(dr[1]);
+                emp.EmpSalary = Convert.ToInt32(dr[2]);
+                
+            }
+
+            return emp;
+        }
+
+
     }
 }
