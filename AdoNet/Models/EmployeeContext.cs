@@ -51,7 +51,7 @@ namespace AdoNet.Models
 
             SqlCommand cmd = new SqlCommand("sp_RajagetEmployeeById", con);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@EmpId",id);
+            cmd.Parameters.AddWithValue("@EmpId", id);
 
 
             DataTable dt = new DataTable();
@@ -62,12 +62,38 @@ namespace AdoNet.Models
                 emp.EmpId = Convert.ToInt32(dr[0]);
                 emp.EmpName = Convert.ToString(dr[1]);
                 emp.EmpSalary = Convert.ToInt32(dr[2]);
-                
+
             }
 
             return emp;
         }
 
 
+        public int UpdateEmployee(EmployeeModel emp)
+        {
+
+            SqlCommand cmd = new SqlCommand("sp_RajaUpdateEmployee", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@EmpId", emp.EmpId);
+            cmd.Parameters.AddWithValue("@EmpName", emp.EmpName);
+            cmd.Parameters.AddWithValue("@EmpSalary", emp.EmpSalary);
+            con.Open();
+            int i = cmd.ExecuteNonQuery();//execute  query and return nos of rows effected
+            con.Close();
+            return i;
+        }
+        public int DeleteById(int? id)
+        {
+
+            SqlCommand cmd = new SqlCommand("sp_DeleteNeerjaEmployees", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@EmpId", id);
+           
+            con.Open();
+            int i = cmd.ExecuteNonQuery();//execute  query and return nos of rows effected
+            con.Close();
+            return i;
+        }
+        
     }
 }
