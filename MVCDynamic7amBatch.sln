@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNet", "AdoNet\AdoNet.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseApproach", "DatabaseApproach\DatabaseApproach.csproj", "{B459106D-8CE1-429D-970C-678CB0E6C648}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstApproach", "CodeFirstApproach\CodeFirstApproach.csproj", "{DA84585B-3F73-4601-9A08-896B7CF62F43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B459106D-8CE1-429D-970C-678CB0E6C648}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B459106D-8CE1-429D-970C-678CB0E6C648}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B459106D-8CE1-429D-970C-678CB0E6C648}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA84585B-3F73-4601-9A08-896B7CF62F43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA84585B-3F73-4601-9A08-896B7CF62F43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA84585B-3F73-4601-9A08-896B7CF62F43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA84585B-3F73-4601-9A08-896B7CF62F43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
