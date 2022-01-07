@@ -16,3 +16,7 @@ namespace CodeFirstApproach.Models
 
     }
 }
+
+//Enable-Migrations
+//Add-Migartion addedDesignationColumn
+//update database

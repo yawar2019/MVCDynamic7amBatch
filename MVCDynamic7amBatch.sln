@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseApproach", "Databas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstApproach", "CodeFirstApproach\CodeFirstApproach.csproj", "{DA84585B-3F73-4601-9A08-896B7CF62F43}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelBasedApproach", "ModelBasedApproach\ModelBasedApproach.csproj", "{AD07AA89-6BE0-4D13-AE48-22580C610093}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DA84585B-3F73-4601-9A08-896B7CF62F43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA84585B-3F73-4601-9A08-896B7CF62F43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA84585B-3F73-4601-9A08-896B7CF62F43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD07AA89-6BE0-4D13-AE48-22580C610093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD07AA89-6BE0-4D13-AE48-22580C610093}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD07AA89-6BE0-4D13-AE48-22580C610093}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD07AA89-6BE0-4D13-AE48-22580C610093}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
