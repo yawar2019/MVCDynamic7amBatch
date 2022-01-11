@@ -329,5 +329,10 @@ namespace MVCDynamic7amBatch.Controllers
                 return Content("<script>alert('Hello World')</script>");
             }
         }
+
+        public ActionResult HtmlHelperExample()
+        {
+            return View();
+        }
     }
 }

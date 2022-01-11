@@ -1,0 +1,24 @@
+﻿@model MVCDynamic7amBatch.Models.EmployeeModel
+@{
+    ViewBag.Title = "HtmlHelperExample";
+}
+
+<h2>HtmlHelperExample</h2>
+
+@*@Html.TextBox("EmpNames")
+
+@Html.TextBoxFor(x=>x.EmpName)*@
+
+@*@Html.Label("gjklhlkh")
+@Html.LabelFor(x=>x.EmpName)*@
+
+<input type="text" name="name" id="firstname" value="" class="form-control" onclick="fun()" /><br />
+@Html.TextBox("UserName","Sagar",new {@class="form-control",id="UserId", onclick = "fun()" })
+@Html.EditorFor(x=>x.EmpName)
+<script>
+    function fun()
+    {
+        alert("Click Me");
+
+    }
+</script>
