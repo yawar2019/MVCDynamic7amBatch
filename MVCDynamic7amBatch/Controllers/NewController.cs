@@ -332,6 +332,17 @@ namespace MVCDynamic7amBatch.Controllers
 
         public ActionResult HtmlHelperExample()
         {
+            EmployeeEntities db = new Models.EmployeeEntities();
+
+            ViewBag.Employees = new SelectList(db.employeeDetails,"EmpId","EmpName",65035);
+            return View();
+        }
+        [HttpPost]
+        public ActionResult HtmlHelperExample(string UserName,string pwd,string Gender,string CourseCsharp,string Employees,string Address,string dob)
+        {
+            EmployeeEntities db = new Models.EmployeeEntities();
+
+            ViewBag.Employees = new SelectList(db.employeeDetails, "EmpId", "EmpName", 65035);
             return View();
         }
     }

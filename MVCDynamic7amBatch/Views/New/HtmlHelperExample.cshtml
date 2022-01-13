@@ -11,14 +11,94 @@
 
 @*@Html.Label("gjklhlkh")
 @Html.LabelFor(x=>x.EmpName)*@
+<form action="~/new/HtmlHelperExample" method="post">
+    @*<input type="text" name="name" id="firstname" value="" class="form-control" onclick="fun()" /><br />*@
+    <span>UserName</span>@Html.TextBox("UserName", "Sagar", new { @class = "form-control", id = "UserId", onclick = "fun()" })
+    @*@Html.EditorFor(x => x.EmpName)*@
+    <br />
+    <span>Password</span> @Html.Password("pwd", "123")<br />
+    <span>dob</span>@Html.TextBox("dob", null, new { @class = "form-control",@type="date" })
 
-<input type="text" name="name" id="firstname" value="" class="form-control" onclick="fun()" /><br />
-@Html.TextBox("UserName","Sagar",new {@class="form-control",id="UserId", onclick = "fun()" })
-@Html.EditorFor(x=>x.EmpName)
+
+    <span>Male</span>@Html.RadioButton("Gender", "Male", true)
+    <span>FeMale</span>@Html.RadioButton("Gender", "FeMale")<br />
+
+    <span>C#</span>@Html.CheckBox("CourseCsharp", true)
+    <span>MVC</span>@Html.CheckBox("MVC")<br />
+
+    <span>Country</span>
+    @*@Html.DropDownList("Country", new List<SelectListItem>() {
+
+new SelectListItem {Text="India",Value="1" },
+new SelectListItem {Text="SriLanka",Value="2" },
+new SelectListItem {Text="Australia",Value="3" },
+
+}, "---select Country---")*@
+
+   @* @Html.DropDownList("Employees",new { })<br />*@
+    @Html.DropDownList("Employees1", (IEnumerable<SelectListItem>)ViewBag.Employees, "Select Employee",new {@onchange="fun()"})<br />
+    <br />
+    <span>Address</span>@Html.TextArea("Address", "Hyderabad", 10, 20, null)
+
+    <br />
+    <input type="submit"  value="Save" />
+
+</form>
+
+
+
+
 <script>
-    function fun()
-    {
-        alert("Click Me");
+    //<script type="text/javascript">
 
-    }
+    //  $(document).ready(function () {
+    //      type = "search"
+    //      $('search').text()
+
+    //      var itemselected = $('#Stockcol option:selected').text();
+    //      if (itemselected != 'Section1') {
+    //          $('#ddlsection').hide();
+    //          $('#colname').show();
+    //      }
+    //      else {
+    //          $('#ddlsection').show();
+    //          $('#colname').hide();
+    //      }
+    //      $('#Stockcol').change(function () {
+    //          var itemselected = $('#Stockcol :selected').text();
+    //          if (itemselected != 'SECTION1') {
+    //              $('#ddlsection').hide();
+    //              $('#colname').show();
+    //          }
+    //          else {
+    //              $('#ddlsection').show();
+    //              $('#colname').hide();
+    //          }
+    //          $.ajax({
+    //              url: "http://localhost:25090/home/SectionData",
+    //              type: "POST",
+    //              dataType: "json",
+    //              data: { tablename: $('#Stockcol :selected').text()},
+    //              success: function (data) {
+
+
+    //                  var section = "<select id='ddlsection'>";
+    //                  section = section + '<option value="">--Select--</option>';
+    //                  for (var i = 0; i < data.length; i++) {
+    //                      section = section + '<option value=' + data[i].code + '>' + data[i].code + '-' + data[i].name + '</option>';
+    //                  }
+    //                  section = section + '</select>';
+    //                  $('#ddlsection').html(section);
+
+
+
+    //              }
+    //          })
+
+
+    //      });
+
+    //  })
+
+
 </script>
