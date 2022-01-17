@@ -1,4 +1,5 @@
-﻿@model MVCDynamic7amBatch.Models.EmployeeModel
+﻿@using MVCDynamic7amBatch.CustomHelpers
+@model MVCDynamic7amBatch.Models.EmployeeModel
 @{
     ViewBag.Title = "HtmlHelperExample";
 }
@@ -44,6 +45,27 @@ new SelectListItem {Text="Australia",Value="3" },
     <input type="submit"  value="Save" />
 
 </form>
+
+@myhtmlhelper.MyLabel("I Accept agreement")<br />
+@Html.createUrControl("text")<br />
+@Html.createUrControl("checkbox")<br />
+@Html.createUrControl("radio")<br />
+@Html.createUrControl("file")<br />
+
+@helper labelbyrazzorcode(string content)
+{
+    <label>@content</label>
+}
+@labelbyrazzorcode("hi this is ali")
+
+@using (Html.BeginForm("FileUploadExample", "New", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <span>File</span>
+    <input type="file" id="fileupload" name="fileupload" />
+    <input type="submit" value="upload" />
+}
+
+@ViewBag.msg
 
 
 

@@ -1,6 +1,7 @@
 ﻿using MVCDynamic7amBatch.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -344,6 +345,18 @@ namespace MVCDynamic7amBatch.Controllers
 
             ViewBag.Employees = new SelectList(db.employeeDetails, "EmpId", "EmpName", 65035);
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult FileUploadExample(HttpPostedFileBase fileupload)
+        {
+            string filename = Path.GetFileName(fileupload.FileName);
+            string path = Server.MapPath("~/upload");
+            fileupload.SaveAs(Path.Combine(path, filename));
+            ViewBag.msg = "uploaded successfully";
+
+            return View();
+
         }
     }
 }
