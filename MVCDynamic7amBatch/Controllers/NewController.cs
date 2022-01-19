@@ -358,5 +358,15 @@ namespace MVCDynamic7amBatch.Controllers
             return View();
 
         }
+
+        public ActionResult ValidationExample()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult ValidationExample(RegisterModel reg)
+        {
+            return Redirect("~/new/ValidationExample");
+        }
     }
 }
