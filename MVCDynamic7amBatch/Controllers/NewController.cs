@@ -368,5 +368,10 @@ namespace MVCDynamic7amBatch.Controllers
         {
             return Redirect("~/new/ValidationExample");
         }
+
+        public ActionResult GetMyBlog()
+        {
+            return View();
+        }
     }
 }

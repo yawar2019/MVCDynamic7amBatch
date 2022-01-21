@@ -219,6 +219,8 @@
     <Content Include="Views\New\GetMeJsondata2.cshtml" />
     <Content Include="Views\New\HtmlHelperExample.cshtml" />
     <Content Include="Views\New\ValidationExample.cshtml" />
+    <Content Include="Views\Shared\_MyLayout.cshtml" />
+    <Content Include="Views\New\GetMyBlog.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -2,6 +2,7 @@
 @model MVCDynamic7amBatch.Models.EmployeeModel
 @{
     ViewBag.Title = "HtmlHelperExample";
+   // Layout = null;
 }
 
 <h2>HtmlHelperExample</h2>
@@ -68,7 +69,10 @@ new SelectListItem {Text="Australia",Value="3" },
 @ViewBag.msg
 
 
-
+@section mySection
+{
+    <h1> HtmlHelper Footer</h1>
+}
 
 <script>
     //<script type="text/javascript">
