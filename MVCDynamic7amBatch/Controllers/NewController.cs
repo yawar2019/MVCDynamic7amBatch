@@ -1,4 +1,5 @@
-﻿using MVCDynamic7amBatch.Models;
+﻿using MVCDynamic7amBatch.CustomFilter;
+using MVCDynamic7amBatch.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,12 +9,17 @@ using System.Web.Mvc;
 
 namespace MVCDynamic7amBatch.Controllers
 {
+
     public class NewController : Controller
     {
         // GET: New
-        public string GetWishes()
+        [MyCustomFilter]
+
+        public ActionResult GetWishes()//2
         {
-            return "help";
+            ViewBag.Player = "Brain Lara";
+
+            return View();
         }
 
         public ActionResult GetMeView()
@@ -87,6 +93,8 @@ namespace MVCDynamic7amBatch.Controllers
             return View();
 
         }
+
+        [MyCustomFilter]
 
         public ActionResult getMeEmployeeDataUsingModel()
         {

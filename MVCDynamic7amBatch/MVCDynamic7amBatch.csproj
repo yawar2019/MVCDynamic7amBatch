@@ -168,6 +168,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\NewController.cs" />
+    <Compile Include="CustomFilter\MyCustomFilter.cs" />
     <Compile Include="CustomHelpers\myhtmlhelper.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -221,6 +222,7 @@
     <Content Include="Views\New\ValidationExample.cshtml" />
     <Content Include="Views\Shared\_MyLayout.cshtml" />
     <Content Include="Views\New\GetMyBlog.cshtml" />
+    <Content Include="Views\New\GetWishes.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
