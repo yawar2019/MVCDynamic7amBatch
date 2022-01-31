@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using MVCDynamic7amBatch.ServiceReference1;
 namespace MVCDynamic7amBatch.Controllers
 {
 
@@ -380,6 +380,31 @@ namespace MVCDynamic7amBatch.Controllers
         public ActionResult GetMyBlog()
         {
             return View();
+        }
+
+        public ActionResult ConsumeWebService()
+        {
+            ServiceReference1.MyFirstServicesSoapClient obj = new MyFirstServicesSoapClient();
+            var result=obj.AddServicess(10,20);
+            return Content(result.ToString());
+        }
+        public string ConsumeWcfService()
+        {
+            ServiceReference2.Service1Client obj = new ServiceReference2.Service1Client();
+            var result = obj.GetAddOperation(10, 20);
+            return result;
+        }
+        public string ConsumeWcfService3()
+        {
+            ServiceReference3.Service1Client obj = new ServiceReference3.Service1Client("WSHttpBinding_IService1");
+            var result = obj.GetAddOperation(10, 20);
+            return result;
+        }
+        public string ConsumeWcfService4()
+        {
+            ServiceReference3.Service1Client obj = new ServiceReference3.Service1Client("NetTcpBinding_IService1");
+            var result = obj.GetAddOperation(10, 20);
+            return result;
         }
     }
 }

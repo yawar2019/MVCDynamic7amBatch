@@ -4,6 +4,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCDynamic7amBatch", "MVCDynamic7amBatch\MVCDynamic7amBatch.csproj", "{0D1F5A4D-9C24-4315-8A2E-F75A023994CC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4255A61B-5277-4ADD-8396-7D7ACBF33B41} = {4255A61B-5277-4ADD-8396-7D7ACBF33B41}
+		{49700780-57D5-4A01-8B2D-5DC952EAB6C3} = {49700780-57D5-4A01-8B2D-5DC952EAB6C3}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperExample", "DapperExample\DapperExample.csproj", "{EF5F42A7-4781-4C98-9C4F-33931A1D5AE2}"
 EndProject
@@ -14,6 +18,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstApproach", "CodeFirstApproach\CodeFirstApproach.csproj", "{DA84585B-3F73-4601-9A08-896B7CF62F43}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelBasedApproach", "ModelBasedApproach\ModelBasedApproach.csproj", "{AD07AA89-6BE0-4D13-AE48-22580C610093}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandleErrorAttributeExample", "HandleErrorAttributeExample\HandleErrorAttributeExample.csproj", "{04DC4B4B-D806-4992-8CC8-6051C2FAD96F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServicesExample", "WebServicesExample\WebServicesExample.csproj", "{49700780-57D5-4A01-8B2D-5DC952EAB6C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFServiceExample", "WCFServiceExample\WCFServiceExample.csproj", "{4255A61B-5277-4ADD-8396-7D7ACBF33B41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +55,18 @@ Global
 		{AD07AA89-6BE0-4D13-AE48-22580C610093}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD07AA89-6BE0-4D13-AE48-22580C610093}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD07AA89-6BE0-4D13-AE48-22580C610093}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04DC4B4B-D806-4992-8CC8-6051C2FAD96F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04DC4B4B-D806-4992-8CC8-6051C2FAD96F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04DC4B4B-D806-4992-8CC8-6051C2FAD96F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04DC4B4B-D806-4992-8CC8-6051C2FAD96F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49700780-57D5-4A01-8B2D-5DC952EAB6C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49700780-57D5-4A01-8B2D-5DC952EAB6C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49700780-57D5-4A01-8B2D-5DC952EAB6C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49700780-57D5-4A01-8B2D-5DC952EAB6C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4255A61B-5277-4ADD-8396-7D7ACBF33B41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4255A61B-5277-4ADD-8396-7D7ACBF33B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4255A61B-5277-4ADD-8396-7D7ACBF33B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4255A61B-5277-4ADD-8396-7D7ACBF33B41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

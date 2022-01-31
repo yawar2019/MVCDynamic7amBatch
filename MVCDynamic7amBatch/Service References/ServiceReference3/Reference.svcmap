@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b6b43684-8658-4df3-bf2e-e321edeb2ad7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/MyWCFServiceApp/WCFServiceExample.Service1.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="189bb244-91d4-4ca5-ae24-4f5d731b3706" SourceId="1" SourceUrl="http://azam-pc/MyWCFServiceApp/WCFServiceExample.Service1.svc?wsdl" />
+    <MetadataFile FileName="WCFServiceExample.disco" MetadataType="Disco" ID="32209d3b-1d20-4515-872b-37ff6cb0d42b" SourceId="1" SourceUrl="http://azam-pc/MyWCFServiceApp/WCFServiceExample.Service1.svc?disco" />
+    <MetadataFile FileName="WCFServiceExample.xsd" MetadataType="Schema" ID="0d0e38d7-4148-47ff-9304-b1d3fcf14ace" SourceId="1" SourceUrl="http://azam-pc/MyWCFServiceApp/WCFServiceExample.Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="WCFServiceExample1.xsd" MetadataType="Schema" ID="248a7fcb-0227-4a35-a5dd-d80de5909626" SourceId="1" SourceUrl="http://azam-pc/MyWCFServiceApp/WCFServiceExample.Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="WCFServiceExample2.xsd" MetadataType="Schema" ID="53e41aa2-1a2f-42fa-a2b0-4519611ac57a" SourceId="1" SourceUrl="http://azam-pc/MyWCFServiceApp/WCFServiceExample.Service1.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
