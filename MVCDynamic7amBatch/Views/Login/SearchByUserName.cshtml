@@ -1,0 +1,33 @@
+﻿@model  List<MVCDynamic7amBatch.Models.UserDetail>
+@{
+    ViewBag.Title = "SearchByUserName";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h2>SearchByUserName</h2>
+
+<form action="~/Login/SearchByUserName" method="post">
+    <input type="date" name="Name" value="" class="form-control" />
+    <input type="submit" value="Submit" class="btn btn-success" />
+</form>
+
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>UserName</th>
+            <th>Password</th>
+        </tr>
+        @if (Model != null)
+        {
+        foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.UserName</td>
+            <td>@item.Password</td>
+        </tr>
+        }
+        }
+        else
+        {
+            <tr><td colspan="2" style="text-align:center">No Records</td></tr>
+        }
+    </table>
